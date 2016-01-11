@@ -105,6 +105,9 @@ body {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 2%;
 }
 
 
@@ -149,8 +152,9 @@ body {
 }
 
 .lead{
-    color: mediumblue;
+    color: black;
     text-align: justify;
+    font-family: Arial, sans-serif;
 }
 
 .featurette-heading{
