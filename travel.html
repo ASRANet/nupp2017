@@ -32,7 +32,7 @@
     <link href="styles.css" rel="stylesheet">
 
 </head>
-<body data-spy="scroll" data-target="#travelSidebar">
+<body data-spy="scroll" data-target="#travelSidebar" data-offset="150">
 
 <div class="navbar-wrapper">
     <div class="container">
@@ -69,7 +69,7 @@
 <!-- fix for mobile devices-->
 <div class="side-navigation col-md-4" id="travelSidebar">
     <ul class="nav nav-pills nav-stacked" id="sidebarNav" data-spy="affix">
-        <li><a href="#direction">Directions</a></li>
+        <li><a href="#directions">Directions</a></li>
         <li><a href="#plane">Flights to London</a></li>
         <li><a href="#underground">Underground</a></li>
         <li><a href="#tram">Tram</a></li>
@@ -82,7 +82,7 @@
 
     <div class="row featurette">
 
-        <div class="featurette-heading">Getting to Croydon</div>
+        <div class="featurette-heading" id="directions">Getting to Croydon</div>
 
         <label for="locationInput">Please enter your location: </label>
         <div class="input-group">
@@ -99,7 +99,7 @@
 
     <div class="row featurette">
 
-        <div class="featurette-heading">Flights to London</div>
+        <div class="featurette-heading" id="plane">Flights to London</div>
 
         <p class="lead">Customised directions based on user location will go here.</p>
 

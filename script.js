@@ -8,7 +8,7 @@ window.onload = function () {
 function checkKeyDeadlines() {
 
     //If changing dates also change in HTML
-    var keyDeadlines = [{event: "Deadline for abstracts", textDate: "6 Jan 2016"},
+    var keyDeadlines = [{event: "Deadline for abstracts", textDate: "6 Jul 2016"},
         {event: "Notification of acceptance", textDate: "6 Aug 2016"},
         {event: "Early bird registration", textDate: "22 Nov 2016"},
         {event: "Submission of full papers", textDate: "4 Jan 2017"},
