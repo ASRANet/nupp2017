@@ -32,7 +32,7 @@
     <link href="styles.css" rel="stylesheet">
 
 </head>
-<body data-spy="scroll" data-target="#travelSidebar" >
+<body data-spy="scroll" data-target="#travelSidebar">
 
 <div class="navbar-wrapper">
     <div class="container">
@@ -70,11 +70,11 @@
 <div class="side-navigation col-md-4" id="travelSidebar">
     <ul class="nav nav-pills nav-stacked" id="sidebarNav" data-spy="affix">
         <li><a href="#direction">Directions</a></li>
-        <li><a href="#plane">By Plane</a></li>
-        <li><a href="#underground">By Underground</a></li>
-        <li><a href="#tram">By Tram</a></li>
-        <li><a href="#train">By Train</a></li>
-        <li><a href="#bus">By Bus</a></li>
+        <li><a href="#plane">Flights to London</a></li>
+        <li><a href="#underground">Underground</a></li>
+        <li><a href="#tram">Tram</a></li>
+        <li><a href="#train">Train</a></li>
+        <li><a href="#bus">Bus</a></li>
     </ul>
 </div>
 
@@ -82,42 +82,43 @@
 
     <div class="row featurette">
 
-    <div class="featurette-heading">Getting to Croydon</div>
+        <div class="featurette-heading">Getting to Croydon</div>
+
+        <label for="locationInput">Please enter your location: </label>
+        <div class="input-group">
+            <input id="locationInput" class="form-control" type="text" aria-describedby="locationAddon">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+        </div>
 
         <div class="embed-responsive embed-responsive-16by9">
-        <canvas class="embed-responsive-item" id="googleMaps" style="height: 30%"></canvas>
+            <canvas class="embed-responsive-item" id="googleMaps" style="height: 30%"></canvas>
 
         </div>
 
-    <div class="featurette-heading" id="underground">By Underground</div>
-
-    <p class="lead">Croydon is not served by the Underground network. However the old East London Line has been
-        integrated into the new
-        London Overground network, linking West Croydon Station to Dalston Junction via New Cross, Docklands, and
-        Whitechapel.
-        This service, which started in June 2010, uses new rolling stock with longitudinal seating layouts similar to
-        those used
-        on Underground trains allowing for more standing room. It is operated by Transport for London as part of the
-        London
-        Overground scheme.</p>
-
-        </div>
-
-    <hr class="featurette-divider">
+    </div>
 
     <div class="row featurette">
 
-    <div class="featurette-heading" id="tram">By Tram</div>
+        <div class="featurette-heading">Flights to London</div>
 
-    <p class="lead">A tramlink tram bound for Croydon
-        Tramlink, opened in 2000, is the first modern tram system to operate in Greater London. Trams at the moment have
-        destinations at Beckenham, Wimbledon, Elmers End and New Addington with all lines traveling through Croydon, on
-        the
-        Croydon Loop. It can also be used to reach the Underground in Wimbledon. Tramlink also has planned extensions to
-        the M25
-        motorway (Park & Ride system), Sutton, Bromley, Lewisham with a planned extension to Crystal Palace. All these
-        plans
-        have been shelved by the current Major of London.</p>
+        <p class="lead">Customised directions based on user location will go here.</p>
+
+    </div>
+
+    <div class="row featurette">
+
+        <div class="featurette-heading" id="underground">Underground</div>
+
+        <p class="lead">Croydon is not served by the Underground network. However the old East London Line has been
+            integrated into the new
+            London Overground network, linking West Croydon Station to Dalston Junction via New Cross, Docklands, and
+            Whitechapel.
+            This service, which started in June 2010, uses new rolling stock with longitudinal seating layouts similar
+            to
+            those used
+            on Underground trains allowing for more standing room. It is operated by Transport for London as part of the
+            London
+            Overground scheme.</p>
 
     </div>
 
@@ -125,35 +126,21 @@
 
     <div class="row featurette">
 
-    <div class="featurette-heading" id="train">By Train</div>
+        <div class="featurette-heading" id="tram">Tram</div>
 
-
-    <p class="lead">East Croydon station is the second busiest station in London and the main station for Croydon. Fast
-        trains run into the
-        centre of London terminating at Victoria or London Bridge stations in about 15-20 minutes.
-        There are direct service connections to London Gatwick and London Luton airports. Journey times from East
-        Croydon to
-        London Gatwick airport range from 15 to 36 minutes, with an average of 13 services per hour during the day. The
-        journey
-        time from East Croydon to London Luton airport is approximately 66 minutes, with an average of 4 services per
-        hour
-        during the day. The train service for London Luton airport also stops at London St Pancras (average journey time
-        approximately 40 minutes), providing interconnections for Eurostar services to Lille, Paris and Brussels, as
-        well as
-        national services to the north of England & Scotland. There are no direct train services to London Heathrow
-        airport.
-        Typical fastest journey time would be approximately 90 minutes and involve at least two changes.
-        All services from London Victoria that head to the south coast stop here. Journey times from East Croydon to
-        Brighton
-        range from 36 to 60 minutes, with an average of 9 services per hour during the day.
-        Services are provided by Southern and First Capital Connect.
-        West Croydon station—which features in the famous story "Casting the Runes" by ghost story master M.R. James—is
-        an
-        interchange station for train, tram and bus. Trains run into the centre of London terminating at Victoria or
-        London
-        Bridge stations in about 20-40 minutes. Services leaving London generally terminate at Sutton but some continue
-        to
-        Guildford, Dorking and Epsom Downs.</p>
+        <p class="lead">A tramlink tram bound for Croydon
+            Tramlink, opened in 2000, is the first modern tram system to operate in Greater London. Trams at the moment
+            have
+            destinations at Beckenham, Wimbledon, Elmers End and New Addington with all lines traveling through Croydon,
+            on
+            the
+            Croydon Loop. It can also be used to reach the Underground in Wimbledon. Tramlink also has planned
+            extensions to
+            the M25
+            motorway (Park & Ride system), Sutton, Bromley, Lewisham with a planned extension to Crystal Palace. All
+            these
+            plans
+            have been shelved by the current Major of London.</p>
 
     </div>
 
@@ -161,22 +148,66 @@
 
     <div class="row featurette">
 
-    <div class="featurette-heading" id="bus">By Bus</div>
+        <div class="featurette-heading" id="train">Train</div>
 
 
-    <p class="lead">Croydon is well served by the London bus network, with a major bus station at West Croydon and a new
-        one opening on the
-        eastern side of Croydon next to the Croydon clocktower and Park Place shopping centre soon. Bus services in the
-        centre
-        of Croydon include, but are not limited to:
-        Towards central London: bus routes 50, 60, 109, 250, 468, X68 (a peak time express service).
-        Other routes: 75, 119 (Purley Way (Croydon Airport) - Bromley), 157, 197, 264, 289, 312 (South Croydon Bus
-        Garage -
-        Peckham, via Central Croydon, Addiscombe), 407, 410, 450, 455, 466 (not too reliable), and X26 (West/East
-        Croydon -
-        Sutton - Kingston - Heathrow Central (Express)).</p>
+        <p class="lead">East Croydon station is the second busiest station in London and the main station for Croydon.
+            Fast
+            trains run into the
+            centre of London terminating at Victoria or London Bridge stations in about 15-20 minutes.
+            There are direct service connections to London Gatwick and London Luton airports. Journey times from East
+            Croydon to
+            London Gatwick airport range from 15 to 36 minutes, with an average of 13 services per hour during the day.
+            The
+            journey
+            time from East Croydon to London Luton airport is approximately 66 minutes, with an average of 4 services
+            per
+            hour
+            during the day. The train service for London Luton airport also stops at London St Pancras (average journey
+            time
+            approximately 40 minutes), providing interconnections for Eurostar services to Lille, Paris and Brussels, as
+            well as
+            national services to the north of England & Scotland. There are no direct train services to London Heathrow
+            airport.
+            Typical fastest journey time would be approximately 90 minutes and involve at least two changes.
+            All services from London Victoria that head to the south coast stop here. Journey times from East Croydon to
+            Brighton
+            range from 36 to 60 minutes, with an average of 9 services per hour during the day.
+            Services are provided by Southern and First Capital Connect.
+            West Croydon station—which features in the famous story "Casting the Runes" by ghost story master M.R.
+            James—is
+            an
+            interchange station for train, tram and bus. Trains run into the centre of London terminating at Victoria or
+            London
+            Bridge stations in about 20-40 minutes. Services leaving London generally terminate at Sutton but some
+            continue
+            to
+            Guildford, Dorking and Epsom Downs.</p>
 
-        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+
+        <div class="featurette-heading" id="bus">Bus</div>
+
+
+        <p class="lead">Croydon is well served by the London bus network, with a major bus station at West Croydon and a
+            new
+            one opening on the
+            eastern side of Croydon next to the Croydon clocktower and Park Place shopping centre soon. Bus services in
+            the
+            centre
+            of Croydon include, but are not limited to:
+            Towards central London: bus routes 50, 60, 109, 250, 468, X68 (a peak time express service).
+            Other routes: 75, 119 (Purley Way (Croydon Airport) - Bromley), 157, 197, 264, 289, 312 (South Croydon Bus
+            Garage -
+            Peckham, via Central Croydon, Addiscombe), 407, 410, 450, 455, 466 (not too reliable), and X26 (West/East
+            Croydon -
+            Sutton - Kingston - Heathrow Central (Express)).</p>
+
+    </div>
 
 </div>
 
