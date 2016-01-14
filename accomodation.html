@@ -24,7 +24,7 @@
     <link href="styles.css" rel="stylesheet">
 
 </head>
-<body>
+<body style="height: 100%">
 
 <div class="navbar-wrapper">
     <div class="container">
@@ -32,7 +32,8 @@
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -42,11 +43,12 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
                         <li><a href="register.html">Register</a></li>
                         <li><a href="uploadAbstract.html">Upload Abstract</a></li>
                         <li><a href="travel.html">Travel</a></li>
-                        <li><a href="accomodation.html">Accommodation</a></li>
+                        <li class="active"><a href="accomodation.html">Accommodation</a></li>
                         <li><a href="venue.html">Venue</a></li>
                         <li><a href="contactUs.html">Contact Us</a></li>
                     </ul>
@@ -57,12 +59,21 @@
     </div>
 </div>
 
+<div class="row featurette" style="height: 100%">
+<div id="map" class="col-md-12 img-responsive" style="height: 100%;"></div>
+</div>
+
 </body>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+<script src="googleMaps.js"></script>
+
+<!--Change API key-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiJnmCoOE023TSHWkmRVcog7Oa2aqrs4g&libraries=places&callback=createNewMap"
+        async defer></script>
+
+<script src="accomodationScript.js"></script>
 
 </html>

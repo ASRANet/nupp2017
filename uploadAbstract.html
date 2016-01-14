@@ -12,7 +12,8 @@
 
     <title>Upload Abstract - NUPP 2017</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,7 +33,8 @@
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -42,9 +44,10 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
                         <li><a href="register.html">Register</a></li>
-                        <li><a href="uploadAbstract.html">Upload Abstract</a></li>
+                        <li class="active"><a href="uploadAbstract.html">Upload Abstract</a></li>
                         <li><a href="travel.html">Travel</a></li>
                         <li><a href="accomodation.html">Accommodation</a></li>
                         <li><a href="venue.html">Venue</a></li>
@@ -57,12 +60,106 @@
     </div>
 </div>
 
+<form action="/Abstract" enctype="multipart/form-data" method="post"><input name="__RequestVerificationToken"
+                                                                            type="hidden"
+                                                                            value="2AokqLiJSCqW__ve5BACL5mYyZRI1_yGhqk631MdYnDjlKnZmcH7-wJhWHcNmq_ulsTVafWstgpMqLEOIIWx3nCedDqqfWaSp3nQ9HNwveE1"/>
+    <div class="container">
+        <div class="content_white">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+
+                    <div class="form-horizontal">
+                        <h1 class="featurette-heading">Abstract Upload</h1>
+                        <hr/>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Ab_FirstName">Forename</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Forename field is required." id="Ab_FirstName"
+                                       name="Ab.FirstName" type="text" value=""/>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Ab.FirstName"
+                                      data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Ab_LastName">Surname</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Surname field is required." id="Ab_LastName"
+                                       name="Ab.LastName" type="text" value=""/>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Ab.LastName"
+                                      data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Ab_EmailAddress">Email address</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Email address field is required." id="Ab_EmailAddress"
+                                       name="Ab.EmailAddress" type="text" value=""/>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Ab.EmailAddress"
+                                      data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <h3 class="col-md-3">Abstract</h3>
+                            <div class=" panel panel-default col-md-9">
+
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#fileUpload" aria-controls="home"
+                                                                              role="tab" data-toggle="tab">Upload
+                                        File</a></li>
+                                    <li role="presentation"><a href="#textUpload" aria-controls="profile" role="tab"
+                                                               data-toggle="tab">Upload Text</a></li>
+                                </ul>
+
+
+                                <div class="tab-content" style="padding-bottom: 1em; padding-top: 1em;">
+                                    <div role="tabpanel" class="tab-pane active" id="fileUpload">
+
+                                            <p>Please select a '.docx, .doc, pdf, .txt' file smaller than 2MB</p>
+                                            <input type="file" id="file" name="file"/>
+
+                                                <span class="field-validation-valid text-danger" data-valmsg-for="File"
+                                                      data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="textUpload">
+                                            <label class="control-label col-md-1" for="textUploadBox">Text</label>
+                                            <textarea class="col-md-11" id="textUploadBox" rows="10" cols="40"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <input type="submit" value="Submit" class="btn btn-default"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
 </body>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 </html>

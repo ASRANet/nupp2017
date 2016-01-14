@@ -1,34 +1,33 @@
 // Created by following the tutorial at https://developers.google.com/maps/documentation/javascript/tutorial
 
+var map = {};
+
+function createNewMap(){
+    if(location.pathname == "/nupp2017/travel.html")googleMap(loadingComplete);
+    else if(location.pathname == "/nupp2017/accomodation.html")googleMap(showAccomodation);
+}
+
 /**Called when the Google map has been successfully retrieved from the server
  *
  */
-function gMapLoaded() {
+function googleMap(callback) {
 
     // Create a new Google Map object
-    map = new google.maps.Map(document.getElementById('googleMaps'), {
-        center: {lat: -33.8688, lng: 151.2195},
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 51.376200, lng: -0.097791},
         zoom: 15,
         mapTypeId: google.maps.MapTypeId.ROADMAP
-
     });
 
-    // Display the user's current position on the map
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(setPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this device.";
-    }
+    callback(map);
+}
+
+setUpSearchBox = function(){
+
+    if(map == {})return;
 
     // Create the search box and display it on screen
-    var input = document.getElementById('pac-input');
-    var searchBox = new google.maps.places.SearchBox(input);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-    // Bias the SearchBox results towards current map's viewport.
-    map.addListener('bounds_changed', function () {
-        searchBox.setBounds(map.getBounds());
-    });
+    var searchBox = new google.maps.places.SearchBox(document.getElementById('locationInput'));
 
     var markers = [];
     // Listen for clicks on the search box results
@@ -59,7 +58,6 @@ function gMapLoaded() {
             // Create a marker for each place.
             markers.push(new google.maps.Marker({
                 map: map,
-                icon: "https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png",
                 title: place.name,
                 position: place.geometry.location
             }));
@@ -74,54 +72,26 @@ function gMapLoaded() {
         map.fitBounds(bounds);
     });
 
-    /** Show the user's map position on screen
-     *
-     * @param position - User's latitude and longitude position
-     */
-    function setPosition(position) {
-        pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        map.setCenter(pos, 5);
-        console.log(position);
-        $.mobile.loading("hide");
+};
 
+setPosition = function (position) {
+
+    if(map == {})return;
+
+    pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    map.setCenter(pos, 5);
+};
+
+getLocation = function(callback) {
+
+    if(map == {})return;
+
+    // Display the user's current position on the map
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(callback);
+    } else {
+        //Set up alert or div
+        x.innerHTML = "Geolocation is not supported by this device.";
     }
 
-    //Create a new parking icon to be used as a marker
-    var icon = {
-        url: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Parking_icon.svg", //url
-        scaledSize: new google.maps.Size(35, 35),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(0, 0)
-    };
-
-    //Retrieve the positions of each car park from the server
-    getAjax("carParkPositions", placeMarkers);
-
-    /**Place the markers on screen for user selection
-     *
-     * @param data - The car park positions retrieved from the server
-     */
-    function placeMarkers(data){
-
-        markerArray = JSON.parse(data);
-
-        //Place a marker for each item in array
-        for(var i = 0; i < markerArray.length; i ++) {
-
-            marker = new google.maps.Marker({
-                icon: icon,
-                map: map,
-                draggable: false,
-                animation: google.maps.Animation.DROP,
-                position: {
-                    lat: markerArray[i].lat, lng: markerArray[i].lng
-                }
-            });
-
-            marker.addListener('click', click);
-
-        }
-
-    }
-
-}
+};

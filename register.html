@@ -12,7 +12,8 @@
 
     <title>Register - NUPP 2017</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,7 +33,8 @@
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -42,8 +44,9 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="register.html">Register</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
+                        <li class="active"><a href="register.html">Register</a></li>
                         <li><a href="uploadAbstract.html">Upload Abstract</a></li>
                         <li><a href="travel.html">Travel</a></li>
                         <li><a href="accomodation.html">Accommodation</a></li>
@@ -57,12 +60,212 @@
     </div>
 </div>
 
+<form action="/Register" method="post"><input name="__RequestVerificationToken" type="hidden"
+                                              value="qmfti9k4ernw-mxjO9zp5GQuaYAexJR0qWYVC6bwxwNoP8WoDQ4GLgglg3un6N_JQ37BtOulUlfGSGgjjERLZMh5dH8gdM5fP6bjYSAE9Zs1"/>
+    <div class="container">
+        <div class="content_white">
+            <div class="row featurette">
+                <div class="col-md-8 col-md-offset-2">
+
+
+                    <div class="form-horizontal">
+                        <h1 class="featurette-heading">Register</h1>
+
+                        <p>Fields marked with * are mandatory.</p>
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Salutation">Title</label>
+                            <div class="col-md-9">
+                                <select data-val="true" data-val-required="The Title field is required."
+                                        id="Salutation" name="Salutation">
+                                    <option selected="selected" value="0">Mr.</option>
+                                    <option value="1">Mrs.</option>
+                                    <option value="2">Ms.</option>
+                                    <option value="3">Dr.</option>
+                                    <option value="4">Prof.</option>
+                                    <option value="5">Sir</option>
+                                    <option value="6">Lady</option>
+                                    <option value="7">Lord</option>
+                                </select>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Salutation"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="FirstName">Forename*</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Forename field is required." id="FirstName"
+                                       name="FirstName" type="text" value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="FirstName"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="LastName">Surname*</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Surname field is required." id="LastName"
+                                       name="LastName" type="text" value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="LastName"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="organisation">Organisation*</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Organisation field is required." id="organisation"
+                                       name="organisation" type="text" value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="organisation"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Address">Address*</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Address field is required." id="Address"
+                                       name="Address" type="text" value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Address"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="City">City*</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The City field is required." id="City" name="City"
+                                       type="text" value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="City"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="PostCode">Post code*</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Post code field is required." id="PostCode"
+                                       name="PostCode" type="text" value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="PostCode"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Country">Country*</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Country field is required." id="Country"
+                                       name="Country" type="text" value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Country"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Telephone">Telephone*</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Telephone field is required." id="Telephone"
+                                       name="Telephone" type="text" value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Telephone"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Email">Email address*</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" data-val="true"
+                                       data-val-required="The Email address field is required." id="Email"
+                                       name="Email" type="email" value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Email"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="Fax">Fax</label>
+                            <div class="col-md-9">
+                                <input class="form-control text-box single-line" id="Fax" name="Fax" type="text"
+                                       value=""/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Fax"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-9" for="NormalCost">I wish to register for the
+                                Conference at the normal cost of &#163;450 [&#163;250 for bona fide students
+                                only]</label>
+                            <div class="col-md-3">
+                                <input class="check-box" data-val="true"
+                                       data-val-required="The I wish to register for the Conference at the normal cost of £450 [£250 for bona fide students only] field is required."
+                                       id="NormalCost" name="NormalCost" type="checkbox" value="true"/><input
+                                    name="NormalCost" type="hidden" value="false"/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="NormalCost"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-9" for="Invoice">Invoice</label>
+                            <div class="col-md-3">
+                                <input class="check-box" data-val="true"
+                                       data-val-required="The Invoice field is required." id="Invoice"
+                                       name="Invoice" type="checkbox" value="true"/><input name="Invoice"
+                                                                                           type="hidden"
+                                                                                           value="false"/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Invoice"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-9" for="Hotels">Please send me information on local
+                                hotels</label>
+                            <div class="col-md-3">
+                                <input class="check-box" data-val="true"
+                                       data-val-required="The Please send me information on local hotels field is required."
+                                       id="Hotels" name="Hotels" type="checkbox" value="true"/><input name="Hotels"
+                                                                                                      type="hidden"
+                                                                                                      value="false"/>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Hotels"
+                                          data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <input type="submit" value="Register now" class="btn btn-default"/>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
 </body>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 </html>

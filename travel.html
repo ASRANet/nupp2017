@@ -23,15 +23,20 @@
 
     <script src="googleMaps.js"></script>
 
-    <!--Change API key-->
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqsmnhgCaG0M8lRFVQUuzscEixtsJtQPo&libraries=places&callback=gMapLoaded"
-            async defer></script>
-
     <!-- Custom styles for this template -->
     <link href="styles.css" rel="stylesheet">
 
-</head>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 50%;
+        }
+    </style>
+
 <body data-spy="scroll" data-target="#travelSidebar" data-offset="150">
 
 <div class="navbar-wrapper">
@@ -51,10 +56,11 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
                         <li><a href="register.html">Register</a></li>
                         <li><a href="uploadAbstract.html">Upload Abstract</a></li>
-                        <li><a href="travel.html">Travel</a></li>
+                        <li class="active"><a href="travel.html">Travel</a></li>
                         <li><a href="accomodation.html">Accommodation</a></li>
                         <li><a href="venue.html">Venue</a></li>
                         <li><a href="contactUs.html">Contact Us</a></li>
@@ -78,22 +84,18 @@
     </ul>
 </div>
 
-<div class="main-body">
+<div class="main-body" style="height: 100%">
 
-    <div class="row featurette">
+    <div class="row featurette" style="height: 100%">
 
         <div class="featurette-heading" id="directions">Getting to Croydon</div>
 
-        <label for="locationInput">Please enter your location: </label>
+        <label for="locationInput">Please enter your location for customised travel details:</label>
         <div class="input-group">
             <input id="locationInput" class="form-control" type="text" aria-describedby="locationAddon">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker" id="getLocationButton"></span></span>
         </div>
-
-        <div class="embed-responsive embed-responsive-16by9">
-            <canvas class="embed-responsive-item" id="googleMaps" style="height: 30%"></canvas>
-
-        </div>
+        <div id="map" class="col-md-12 img-responsive"></div>
 
     </div>
 
@@ -101,7 +103,9 @@
 
         <div class="featurette-heading" id="plane">Flights to London</div>
 
-        <p class="lead">Customised directions based on user location will go here.</p>
+        <p id="flightParagraph" class="lead">Flight prices will be available here soon.</p>
+
+        <table class="table table-striped" id="flightDetails"></table>
 
     </div>
 
@@ -215,10 +219,17 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
+
 <script src="script.js"></script>
+<script src="googleMaps.js"></script>
+
+<!--Change API key-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiJnmCoOE023TSHWkmRVcog7Oa2aqrs4g&libraries=places&callback=createNewMap"
+        async defer></script>
+
+<script src="travelScript.js"></script>
 
 </html>
