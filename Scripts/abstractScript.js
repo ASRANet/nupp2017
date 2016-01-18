@@ -2,6 +2,7 @@ window.onload = function () {
 
     //Disable the submit button until all mandatory fields are filled
     $("#submitButton").prop('disabled', true);
+    $(".form-el").on("keyup", validateAbstractForm);
 
 };
 
