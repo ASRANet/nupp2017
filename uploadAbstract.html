@@ -30,7 +30,7 @@
 <div class="navbar-wrapper">
     <div class="container">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -70,37 +70,39 @@
 
 
                     <div class="form-horizontal">
-                        <h1 class="featurette-heading">Abstract Upload</h1>
-                        <hr/>
+                        <h1 class="featurette-heading">Upload Abstract</h1>
+
+                        <p>Fields marked with * are mandatory.</p>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="Ab_FirstName">Forename</label>
+                            <label class="control-label col-md-3" for="Ab_FirstName">Forename*</label>
                             <div class="col-md-9">
-                                <input class="form-control text-box single-line" data-val="true"
+                                <input class="form-control text-box single-line form-el" data-val="true"
                                        data-val-required="The Forename field is required." id="Ab_FirstName"
-                                       name="Ab.FirstName" type="text" value=""/>
+                                       name="Ab.FirstName" type="text" value="" onkeyup="validateAbstractForm()"/>
                                 <span class="field-validation-valid text-danger" data-valmsg-for="Ab.FirstName"
                                       data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="Ab_LastName">Surname</label>
+                            <label class="control-label col-md-3" for="Ab_LastName">Surname*</label>
                             <div class="col-md-9">
-                                <input class="form-control text-box single-line" data-val="true"
+                                <input class="form-control text-box single-line form-el" data-val="true"
                                        data-val-required="The Surname field is required." id="Ab_LastName"
-                                       name="Ab.LastName" type="text" value=""/>
+                                       name="Ab.LastName" type="text" value="" onkeyup="validateAbstractForm()"/>
                                 <span class="field-validation-valid text-danger" data-valmsg-for="Ab.LastName"
                                       data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="Ab_EmailAddress">Email address</label>
+                            <label class="control-label col-md-3" for="Ab_EmailAddress">Email address*</label>
                             <div class="col-md-9">
-                                <input class="form-control text-box single-line" data-val="true"
+                                <input class="form-control text-box single-line form-el" data-val="true"
                                        data-val-required="The Email address field is required." id="Ab_EmailAddress"
-                                       name="Ab.EmailAddress" type="text" value=""/>
+                                       name="Ab.EmailAddress" type="text" value=""
+                                       onkeyup="validateAbstractForm()"/>
                                 <span class="field-validation-valid text-danger" data-valmsg-for="Ab.EmailAddress"
                                       data-valmsg-replace="true"></span>
                             </div>
@@ -108,30 +110,41 @@
 
                         <div class="form-group">
 
-                            <h3 class="col-md-3">Abstract</h3>
+                            <label class="control-label col-md-3">Abstract*</label>
                             <div class=" panel panel-default col-md-9">
 
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li role="presentation" class="active"><a href="#fileUpload" aria-controls="home"
-                                                                              role="tab" data-toggle="tab">Upload
+                                                                              role="tab" data-toggle="tab"
+                                                                              id="fileUploadTab">Upload
                                         File</a></li>
                                     <li role="presentation"><a href="#textUpload" aria-controls="profile" role="tab"
-                                                               data-toggle="tab">Upload Text</a></li>
+                                                               data-toggle="tab" id="textUploadTab">Upload Text</a></li>
                                 </ul>
 
 
                                 <div class="tab-content" style="padding-bottom: 1em; padding-top: 1em;">
                                     <div role="tabpanel" class="tab-pane active" id="fileUpload">
 
-                                            <p>Please select a '.docx, .doc, pdf, .txt' file smaller than 2MB</p>
-                                            <input type="file" id="file" name="file"/>
-
+                                        <p>Please select a '.docx, .doc, pdf, .txt' file smaller than 2MB</p>
+                                        <input class=" form-el" type="file" id="fileInput" name="file"
+                                               onchange="validateAbstractForm()"/>
+                                        <label for="removeFile"></label>
+                                        <input class="pull-right" type="button" id="removeFile" value="Remove file"
+                                               onclick="$('#fileInput').val(''); validateAbstractForm()">
                                                 <span class="field-validation-valid text-danger" data-valmsg-for="File"
                                                       data-valmsg-replace="true"></span>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="textUpload">
-                                            <label class="control-label col-md-1" for="textUploadBox">Text</label>
-                                            <textarea class="col-md-11" id="textUploadBox" rows="10" cols="40"></textarea>
+                                        <div class="row">
+                                        <label class="control-label col-md-2" for="titleInput">Paper Title</label>
+                                        <input class="col-md-10" type="text" id="titleInput" onkeyup="validateAbstractForm()">
+                                        </div>
+                                        <div class="row">
+                                        <label for="textUploadBox" class="control-label col-md-2">Abstract</label>
+                                        <textarea class="col-md-10 form-el" id="textUploadBox" rows="10" cols="40"
+                                                  onkeyup="validateAbstractForm()"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +153,7 @@
 
                         <div class="form-group">
                             <div class="col-md-offset-3 col-md-9">
-                                <input type="submit" value="Submit" class="btn btn-default"/>
+                                <input type="submit" value="Submit" class="btn btn-default" id="submitButton"/>
                             </div>
                         </div>
 
@@ -151,15 +164,13 @@
     </div>
 </form>
 
-
 </body>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<script src="script.js"></script>
+<script src="Scripts/script.js"></script>
+<script src="Scripts/abstractScript.js"></script>
 
 </html>

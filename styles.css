@@ -114,6 +114,18 @@ body {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
+@media (max-width: 992px) {
+
+    #sidebar{
+        visibility: hidden;
+    }
+    .main-body{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 1%;
+    }
+
+}
 @media (min-width: 768px) {
     /* Navbar positioning foo */
     .navbar-wrapper {
@@ -154,9 +166,14 @@ body {
 .lead{
     color: black;
     text-align: justify;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: medium;
 }
 
 .featurette-heading{
     color: crimson;
+}
+
+.tab-disabled{
+    opacity: 0.5;
 }
